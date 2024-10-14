@@ -1,1 +1,28 @@
 Nome tabella: used_cars        
+
+id                                  BIGINT              NOT_NULL                PRIMARY KEY         AUTO_INCREMENT
+chassis_number                      SMALLINT            NOT_NULL                UNIQUE
+brand                               VARCHAR             NOT_NULL                
+model                               VARCHAR             NOT_NULL
+color                               VARCHAR             NOT_NULL
+seats                               TINYINT             NOT_NULL
+doors                               TINYINT             NULL       !*
+year_matriculation                  TINYINT             NOT_NULL
+mileage                             SMALLINT            NULL
+gearbox                             VARCHAR             NULL       !**
+engine_type (diesel,gasoline...)    VARCHAR             NOT_NULL
+engine_size (cc)                    SMALLINT            NOT_NULL
+horsepower                          SMALLINT            NOT_NULL
+kilowatts                           SMALLINT            NOT_NULL
+prev_owners                         TINYINT             NULL
+vehicle_condition                   VARCHAR             NULL
+price                               FLOAT               NULL
+
+
+
+
+* ( Motorcycles may not have doors )
+** ( Ho pensato a qualche tipo di mezzo che poteva non avere un cambio come biciclette elettriche, 
+    monopattini elettrici o altri tipi di "veicoli" che magari un concessionario poteva vendere.
+    I thought of some kind of vehicle that might not have a gearbox like electric bikes, 
+    electric kick scooters or other types of "vehicles" that maybe a dealer could sell. )
